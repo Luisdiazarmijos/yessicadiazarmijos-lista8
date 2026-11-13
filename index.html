@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yessica Díaz Armijos - Lista 8</title>
+  <!-- ETIQUETAS PARA VISTA PREVIA BONITA AL COMPARTIR EN WHATSAPP Y REDES -->
+  <meta property="og:title" content="Cangonamá Vuelve a Soñar • Mapa Ciudadano Lista 8">
+  <meta property="og:description" content="Conoce el Plan de Trabajo de Yessica Díaz Armijos, la agenda de recorridos en Cangonamá y deja tu propuesta en el mapa.">
+  <meta property="og:image" content="https://TU-USUARIO.github.io/TU-REPO/portada-compartir.jpg">
+  <meta property="og:type" content="website">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', system-ui, sans-serif; }
+    body { display: flex; flex-direction: column; height: 100dvh; background: #f4f4f9; overflow: hidden; }
+    
+    /* Encabezado con colores de campaña */
+    header {
+      background: linear-gradient(135deg, #003399 0%, #0055cc 75%, #9900cc 100%);
+      color: white;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border-bottom: 4px solid #ffcc00;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .avatar {
+      width: 54px; height: 54px; border-radius: 50%;
+      border: 3px solid #ffcc00; object-fit: cover; background: white;
+    }
+    .header-text h1 { font-size: 1.1rem; font-weight: 800; line-height: 1.1; text-transform: uppercase; }
+    .header-text p { font-size: 0.8rem; color: #ffcc00; font-weight: 600; margin-top: 2px; }
+
+    /* Contenedor del Mapa de Padlet */
+    .map-container { flex: 1; width: 100%; position: relative; }
+    iframe { width: 100%; height: 100%; border: none; }
+
+    /* Barra inferior con los 3 botones */
+    nav {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+      padding: 10px; background: #ffffff; border-top: 1px solid #ddd;
+    }
+    .btn {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 10px 6px; border-radius: 12px; text-decoration: none;
+      font-size: 0.78rem; font-weight: 700; text-align: center; cursor: pointer; border: none;
+      transition: transform 0.1s;
+    }
+    .btn:active { transform: scale(0.96); }
+    .btn-sugerencia { background: #b80099; color: white; }
+    .btn-plan { background: #0044bb; color: white; }
+    .btn-eventos { background: #ffcc00; color: #002266; }
+
+    /* Ventana Modal para Plan de Gobierno y Eventos */
+    .modal {
+      display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.65);
+      align-items: center; justify-content: center; padding: 16px; z-index: 100;
+    }
+    .modal-content {
+      background: white; border-radius: 16px; max-width: 450px; width: 100%;
+      padding: 20px; max-height: 80vh; overflow-y: auto; position: relative;
+    }
+    .close { position: absolute; top: 12px; right: 16px; font-size: 1.4rem; cursor: pointer; font-weight: bold; }
+    .modal h2 { color: #003399; margin-bottom: 12px; font-size: 1.2rem; }
+    .item { padding: 10px; border-left: 4px solid #ffcc00; background: #f8f9fa; margin-bottom: 10px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <!--  'foto-yessica.png' con el enlace o archivo de su foto circular -->
+    <img src="foto-yessica.png" alt="Yessica Díaz" class="avatar">
+    <div class="header-text">
+      <h1>Cangonamá vuelve a soñar</h1>
+      <p>Mapa Ciudadano • Yessica Díaz Armijos -  Lista 8</p>
+    </div>
+  </header>
+
+  <div class="map-container">
+    <!-- PEGA AQUÍ EL ENLACE EMBED DE TU PADLET -->
+    <iframe src="https://padlet.com/embed/s025fc5h2i1d89mmtqjx" allow="geolocation"></iframe>
+  </div>
+
+  <nav>
+    <button class="btn btn-sugerencia" onclick="alert('Toca el botón (+) rosa dentro del mapa, busca tu barrio en Cangonamá y deja tu propuesta.')">
+      💬 Enviar<br>Sugerencia
+    </button>
+    <button class="btn btn-plan" onclick="abrirModal('modal-plan')">
+      📄 Plan de<br>Gobierno
+    </button>
+    <button class="btn btn-eventos" onclick="abrirModal('modal-eventos')">
+      📅 Próximos<br>Eventos
+    </button>
+  </nav>
+
+  <!-- MODAL: PLAN DE GOBIERNO -->
+  <div id="modal-plan" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('modal-plan')">&times;</span>
+      <h2>Plan de Trabajo - Yessica Díaz Armijos - Lista 8</h2>
+      <div class="item"><strong>1. Fortalecimiento institucional:</strong> Participación ciudadana y gestión pública.</div>
+      <div class="item"><strong>2. Infraestructura comunitaria:</strong> Gestionaremos obras que mejoren los espacios públicos, deportivos y comunales de nuestra parroquia.</div>
+      <div class="item"><strong>3. Desarrollo productivo agropecuario:</strong> Impulsaremos la gestión de proyectos y apoyo técnico para fortalecer la agricultura y ganadería.</div>
+      <div class="item"><strong>4. Turismo sostenible:</strong> Impulsaremos el potencial turístico de Cangonamá, rescatando nuestras raíces, cultura, tradiciones y atractivos naturales. </div>
+      <div class="item"><strong>5. Ganaderia:</strong> Gestionaremos apoyo para impulsar el mejoramiento genético del ganado, fortaleciendo la producción y competitividad de nuestros ganaderos.</div>
+      <div class="item"><strong>6. Transporte escolar:</strong> Gestionaremos el servicio de transporte escolar para que nuestros niños y jóvenes puedan trasladarse de manera segura a sus escuelas y colegios. </div>
+      <div class="item"><strong>7. Desarrollo social:</strong> Grupos prioritarios, educación, deporte y juventud. </div>
+      <div class="item"><strong>8. Infraestructura:</strong> Gestionaremos la construcción de la cubierta para la cancha del parque central de Cangonamá, el mejoramiento de la cancha de uso múltiple y de las casas comunales, así como obras de adoquinado en beneficio de nuestros barrios. </div>
+       <div class="item"><strong>9. Medio ambiente:</strong> Promoveremos acciones de conservación, protección de fuentes de agua y cuidado de nuestros recursos naturales.</div>
+       <div class="item"><strong>10. Administración transparente y puertas abiertas:</strong> Mantendremos una administración cercana a la ciudadanía, con puertas abiertas, participación comunitaria y rendición de cuentas periódica sobre la gestión y el uso de los recursos públicos.</div>
+      <!-- Si tienes el PDF subido a Google Drive, pega el link aquí -->
+      <a href="https://drive.google.com/file/d/12_vLDMN8uNjwUyr2ZDQZ-aB7Of2ImlXw/view?usp=sharing" target="_blank" style="display:block; text-align:center; background:#0044bb; color:white; padding:10px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:12px;">Descargar Plan Completo (PDF)</a>
+    </div>
+  </div>
+
+  <!-- MODAL: EVENTOS -->
+  <div id="modal-eventos" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal('modal-eventos')">&times;</span>
+      <h2>Agenda de Recorridos Noviembre📍</h2>
+      <div class="item"><strong>Viernes 13:</strong> Colocación de material publicitario en los diferentes barrios.</div>
+      <div class="item"><strong>Sábado 14 al Viernes 20:</strong> Recorridos por los diferentes barrios de la parroquia, compartiendo propuestas y escuchando a la ciudadanía</div>
+      <div class="item"><strong>Domingo 15 al Jueves 26:</strong> Reuniones con los habitantes de los diferentes barrios.</div>
+      <div class="item"><strong>Sábado 21 - 14:00:</strong>  Mitin político por el Parque Central de Cangonama</div>
+      <div class="item"><strong>Domingo 22 al Miércoles 25:</strong> Recorridos por los diferentes barrios de la parroquia.</div>
+      <div class="item"><strong>Sábado 26 - 18:00:</strong> Cierre de campaña: Misa de Acción de Gracias en Chalanga, sector Santa Cruz del Agua Fría.</div>
+    </div>
+  </div>
+
+  <script>
+    function abrirModal(id) { document.getElementById(id).style.display = 'flex'; }
+    function cerrarModal(id) { document.getElementById(id).style.display = 'none'; }
+  </script>
+</body>
+</html>
